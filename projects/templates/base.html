@@ -1,0 +1,37 @@
+<!-- projects/templates/base.html -->
+{% load i18n %}
+<!doctype html>
+<html lang="ar" class="h-100" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ibrahim Koujar, ikoujar">
+    <title>{% trans 'Projects Management' %}</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- STYLES -->
+    <!-- SCRIPTS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
+    <!-- SCRIPTS -->
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+    {% include "partials/header.html" %}
+    <!-- MAIN -->
+    <main class="flex-shrink-0">
+        <div class="container mt-5">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <!-- MAIN -->
+    {% include "partials/footer.html" %}
+</body>
+
+</html>
+
